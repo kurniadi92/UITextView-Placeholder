@@ -15,11 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "UITextViewPlaceholder",
-            path: "Sources",
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
-            ]
+            path: "Sources/UITextViewPlaceholder",
+            publicHeadersPath: "."
         )
     ]
 )
