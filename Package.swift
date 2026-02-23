@@ -11,12 +11,18 @@ let package = Package(
         .library(
             name: "UITextViewPlaceholder",
             targets: ["UITextViewPlaceholder"]),
+        .library(
+            name: "UITextViewPlaceholderSwiftUI",
+            targets: ["UITextViewPlaceholderSwiftUI"]),
     ],
     targets: [
         .target(
             name: "UITextViewPlaceholder",
-            path: "Sources/UITextViewPlaceholder",
-            publicHeadersPath: "."
-        )
+            path: "Sources/UITextViewPlaceholder"
+        ),
+        .target(
+            name: "UITextViewPlaceholderSwiftUI",
+            path: "Sources/UITextViewPlaceholderSwiftUI"
+        ),
     ]
 )

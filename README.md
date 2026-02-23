@@ -20,30 +20,13 @@ pod 'UITextView+Placeholder'
 Usage
 -----
 
-- **Import Dynamic Framework**:
+- **Import**:
 
-    e.g. If you're using CocoaPods with `use_frameworks!` flag.
-
-    ```objc
-    @import UITextView_Placeholder;
-    ```
-    
-- **Import Static Library**:
-
-    ```objc
-    #import <UITextView+Placeholder/UITextView+Placeholder.h>
+    ```swift
+    import UITextViewPlaceholder
     ```
 
 Then create `UITextView` and set `placeholder`.
-
-- **Implement Objective-C**:
-
-    ```objc
-    UITextView *textView = [[UITextView alloc] init];
-    textView.placeholder = @"How are you?";
-    textView.placeholderColor = [UIColor lightGrayColor]; // optional
-    textView.attributedPlaceholder = ... // NSAttributedString (optional)
-    ```
 
 - **Implement Swift**:
 
@@ -52,6 +35,28 @@ Then create `UITextView` and set `placeholder`.
     textView.placeholder = "How are you?"
     textView.placeholderColor = UIColor.lightGray // optional
     textView.attributedPlaceholder = ... // NSAttributedString (optional)
+    ```
+
+- **Implement SwiftUI**:
+
+    Add the `UITextViewPlaceholderSwiftUI` product to your package dependency, then:
+
+    ```swift
+    import UITextViewPlaceholderSwiftUI
+
+    struct ContentView: View {
+        @State private var text = ""
+
+        var body: some View {
+            PlaceholderTextEditor(
+                text: $text,
+                placeholder: "How are you?"
+            )
+            // optional modifiers
+            .placeholderColor(.gray)
+            .font(.body)
+        }
+    }
     ```
 
 Congratulations! You're done. 🎉
