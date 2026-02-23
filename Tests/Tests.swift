@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 import XCTest
-@testable import UITextView_Placeholder
+@testable import UITextViewPlaceholder
 
 class Tests: XCTestCase {
 

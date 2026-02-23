@@ -18,8 +18,7 @@ let package = Package(
     targets: [
         .target(
             name: "UITextViewPlaceholder",
-            path: "Sources/UITextViewPlaceholder",
-            publicHeadersPath: "."
+            path: "Sources/UITextViewPlaceholder"
         ),
         .target(
             name: "UITextViewPlaceholderSwiftUI",
