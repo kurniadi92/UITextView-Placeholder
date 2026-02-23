@@ -54,6 +54,28 @@ Then create `UITextView` and set `placeholder`.
     textView.attributedPlaceholder = ... // NSAttributedString (optional)
     ```
 
+- **Implement SwiftUI**:
+
+    Add the `UITextViewPlaceholderSwiftUI` product to your package dependency, then:
+
+    ```swift
+    import UITextViewPlaceholderSwiftUI
+
+    struct ContentView: View {
+        @State private var text = ""
+
+        var body: some View {
+            PlaceholderTextEditor(
+                text: $text,
+                placeholder: "How are you?"
+            )
+            // optional modifiers
+            .placeholderColor(.gray)
+            .font(.body)
+        }
+    }
+    ```
+
 Congratulations! You're done. 🎉
 
 
