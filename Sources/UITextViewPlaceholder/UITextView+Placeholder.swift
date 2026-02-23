@@ -170,7 +170,7 @@ extension UITextView {
             needsUpdateFont = false
         }
 
-        if (placeholderTextView.attributedText?.length ?? 0) == 0 {
+        if placeholderTextView.attributedText?.string.isEmpty ?? true {
             placeholderTextView.textAlignment = textAlignment
         }
 
